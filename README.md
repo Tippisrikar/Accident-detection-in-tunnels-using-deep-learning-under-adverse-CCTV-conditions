@@ -9,6 +9,7 @@ This project implements a **real-time accident detection system** using deep lea
 
 - [Introduction](#introduction)
 - [Project Structure](#project-structure)
+- [Dataset link](#Dataset-link)
 - [Setup & Installation](#setup--installation)
 - [Training the Model](#training-the-model)
 - [Evaluating the Model](#evaluating-the-model)
@@ -25,7 +26,7 @@ The increasing number of road and tunnel accidents captured on CCTV requires an 
 
 This project:
 - Uses **YOLOv8** for fast object detection.
-- Trains on a **custom accident dataset** in COCO format.
+- Trains on a **custom accident dataset**.
 - Can process both **images and videos**.
 - Provides **evaluation metrics** and **performance graphs** for analysis.
 
@@ -33,17 +34,35 @@ This project:
 
 ## 📂 Project Structure
 
-```
-├── detect_accident.py          # For running inference on images or videos
-├── evaluate.py                 # Evaluate trained model on validation set
-├── performance_analysis.py     # Tabular and graphical performance analysis
-├── train_yolov8.py             # Training script for YOLOv8 on custom dataset
-├── accident_results/           # Directory to store model weights, results, graphs
-└── README.md                   # Project documentation (this file)
+```   
+|───Dataset.v1i.yolov8
+|   ├───test
+|    │   ├───images
+|    │   └───labels
+|    ├───train
+|    │   ├───images
+|    │   └───labels
+|    |───valid
+|    |   ├───images
+|    |    └───labels
+|    |─── data.yaml
+|    |───detect_accident.py
+|    |───evaluate.py
+|    |───train_yolov8.py
+|    |───README.dataset.txt
+|    |───README.roboflow.txt
+|   
 ```
 
 ---
+## Dataset
 
+The dataset used in this project is hosted on Roboflow:
+
+👉 [Accident in Tunnels Dataset on Roboflow](https://app.roboflow.com/mine2/accident-in-tunnels/1)
+
+You can download it in the required format (YOLOv8) from the link above.
+---
 ## ⚙️ Setup & Installation
 
 ### Requirements:
